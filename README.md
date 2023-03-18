@@ -15,6 +15,7 @@
 ## 安装和加载
 
 ```
+if (!requireNamespace("remotes", quietly = TRUE))install.packages("remotes")
 remotes::install_github("xiechengyong123/friendly2MR")
 library(friendly2MR)
 ```
