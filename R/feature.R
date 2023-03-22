@@ -48,7 +48,7 @@ find_anyexposur_outcome<-function(exposure=exposure,outcome=outcome,write=F,p1 =
     
     
     #执行MR分析
-    res <- mr(dat)
+    res <- TwoSampleMR::mr(dat)
     
     if (sum(dat$mr_keep)==0) {
       res=cbind(exposure_id,outcome,"初筛结果无阳性")
@@ -128,7 +128,7 @@ find_exposur_anyoutcome<-function(exposure=exposure,outcome=outcome,write=F,p1 =
     dat <- harmonise_data(exposure_dat, outcome_dat)
     
     #执行MR分析
-    res <- mr(dat)
+    res <- TwoSampleMR::mr(dat)
     
     if (sum(dat$mr_keep)==0) {
       res=cbind(exposure,outcome_id,"初筛结果无阳性")
