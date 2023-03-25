@@ -3,7 +3,7 @@
 #' @export
 #' @return data frame
 #查询多个暴露对一个结局的阳性结果
-find_anyexposur_outcome<-function(exposure=exposure,outcome=outcome,write=F,p1 = 5e-08,clump = TRUE,p2 = 5e-08,r2= 0.001,kb = 10000,LD=0.8){
+find_anyexposur_outcome<-local(function(exposure=exposure,outcome=outcome,write=F,p1 = 5e-08,clump = TRUE,p2 = 5e-08,r2= 0.001,kb = 10000,LD=0.8){
   #设置MR_result_combine为空向量  
   MR_result_combine<-c()
   start=Sys.time()
@@ -65,7 +65,7 @@ find_anyexposur_outcome<-function(exposure=exposure,outcome=outcome,write=F,p1 =
       MR_result_combine<-rbind(MR_result_combine,res)
     }
     
-  }
+  })
   
   #将MR_result_combine设置为数据狂格式然后重新设置列名
   MR_result_combine=data.frame(MR_result_combine)
