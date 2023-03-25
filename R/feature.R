@@ -65,7 +65,7 @@ find_anyexposur_outcome<-local(function(exposure=exposure,outcome=outcome,write=
       MR_result_combine<-rbind(MR_result_combine,res)
     }
     
-  })
+  }
   
   #将MR_result_combine设置为数据狂格式然后重新设置列名
   MR_result_combine=data.frame(MR_result_combine)
@@ -78,7 +78,7 @@ find_anyexposur_outcome<-local(function(exposure=exposure,outcome=outcome,write=
   print(end-start)
   return(MR_result_combine)
   
-}
+})
 
 #' 查询一个暴露对多个结局的阳性结果
 #' @export
