@@ -3,7 +3,7 @@
 #' @export
 #' @return data frame
 #查询多个暴露对一个结局的阳性结果
-find_anyexposur_outcome<-function(exposure=exposure,outcome=outcome,write=F,p1 = 5e-08,clump = TRUE,p2 = 5e-08,r2= 0.001,kb = 10000,LD=0.8){
+.find_anyexposur_outcome<-function(exposure=exposure,outcome=outcome,write=F,p1 = 5e-08,clump = TRUE,p2 = 5e-08,r2= 0.001,kb = 10000,LD=0.8){
   #设置MR_result_combine为空向量  
   MR_result_combine<-c()
   start=Sys.time()
@@ -84,7 +84,7 @@ find_anyexposur_outcome<-function(exposure=exposure,outcome=outcome,write=F,p1 =
 #' @export
 #' @return data frame
 #查询一个暴露对多个结局的阳性结果
-find_exposur_anyoutcome<-function(exposure=exposure,outcome=outcome,write=F,p1 = 5e-08,clump = TRUE,p2 = 5e-08,r2= 0.001,kb = 10000,LD=0.8){
+.find_exposur_anyoutcome<-function(exposure=exposure,outcome=outcome,write=F,p1 = 5e-08,clump = TRUE,p2 = 5e-08,r2= 0.001,kb = 10000,LD=0.8){
   #设置MR_result_combine为空向量
   MR_result_combine<-c()
   starttime=Sys.time()
@@ -167,7 +167,7 @@ find_exposur_anyoutcome<-function(exposure=exposure,outcome=outcome,write=F,p1 =
 #' @return data frame
 #查询一个暴露对多个结局的阳性结果
 #从工具变量中插补缺失的SNP(1000基因组数据)
-snp_add_eaf=function(exposure=NULL,outcome=NULL,pop="EUR"){
+.snp_add_eaf=function(exposure=NULL,outcome=NULL,pop="EUR"){
   
   if(!is.null(exposure)&!is.null(outcome)){
     stop("只能输入暴露或者结局，二选其一")
@@ -246,7 +246,7 @@ snp_add_eaf=function(exposure=NULL,outcome=NULL,pop="EUR"){
 #' @export
 #' @return data frame
 #定义函数：查找工具变量相关的混杂因素
-deletion_confounding_snp = function(confound = NULL,
+.deletion_confounding_snp = function(confound = NULL,
                                     exposure_dat = NULL,
                                     query_gene = NULL,
                                     query_region = NULL,
