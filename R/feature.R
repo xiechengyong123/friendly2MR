@@ -4,8 +4,11 @@
 #' @return data frame
 #查询多个暴露对一个结局的阳性结果
 find_anyexposur_outcome<-function(exposure=exposure,outcome=outcome,write=F,p1 = 5e-08,clump = TRUE,p2 = 5e-08,r2= 0.001,kb = 10000,LD=0.8){
-  #设置MR_result_combine为空向量  
-  MR_result_combine<-c()
+  #设置MR_result_combine为空数据框  
+  #MR_result_combine<-c()
+  columns= c("id.exposure","id.outcome","conclusion")
+  MR_result_combine = data.frame(matrix(nrow = 0, ncol = length(columns)))
+  colnames(MR_result_combine) = columns
   start=Sys.time()
   #对每一个暴露进行循环分析
   for (id in 1:length(exposure)) {
@@ -69,7 +72,7 @@ find_anyexposur_outcome<-function(exposure=exposure,outcome=outcome,write=F,p1 =
   
   #将MR_result_combine设置为数据狂格式然后重新设置列名
   MR_result_combine=data.frame(MR_result_combine)
-  colnames(MR_result_combine)<-c("id.exposure","id.outcome","conclusion")
+  #colnames(MR_result_combine)<-c("id.exposure","id.outcome","conclusion")
   if (write) {
     write.csv(MR_result_combine,"MR多对一初筛.csv",row.names = F)
   }
@@ -86,7 +89,10 @@ find_anyexposur_outcome<-function(exposure=exposure,outcome=outcome,write=F,p1 =
 #查询一个暴露对多个结局的阳性结果
 find_exposur_anyoutcome<-function(exposure=exposure,outcome=outcome,write=F,p1 = 5e-08,clump = TRUE,p2 = 5e-08,r2= 0.001,kb = 10000,LD=0.8){
   #设置MR_result_combine为空向量
-  MR_result_combine<-c()
+  #MR_result_combine<-c()
+  columns= c("id.exposure","id.outcome","conclusion")
+  MR_result_combine = data.frame(matrix(nrow = 0, ncol = length(columns)))
+  colnames(MR_result_combine) = columns
   starttime=Sys.time()
   #对每一个暴露进行循环分析
   for (id in 1:length(outcome)) {
@@ -149,7 +155,7 @@ find_exposur_anyoutcome<-function(exposure=exposure,outcome=outcome,write=F,p1 =
   
   #将MR_result_combine设置为数据狂格式然后重新设置列名
   MR_result_combine=data.frame(MR_result_combine)
-  colnames(MR_result_combine)<-c("id.exposure","id.outcome","conclusion")
+  #colnames(MR_result_combine)<-c("id.exposure","id.outcome","conclusion")
   if (write) {
     write.csv(MR_result_combine,"MR一对多初筛.csv",row.names = F)
   }
@@ -260,8 +266,11 @@ deletion_confounding_snp = function(confound = NULL,
   #将多个混杂因素进行合并，以|为分隔符
   confound = paste(confound, collapse = "|")
   
-  #设置MR_result_combine为空向量  
-  MR_result_combine<-c()
+  #设置MR_result_combine为空数据框  
+  #MR_result_combine<-c()
+  columns= c("工具变量","混杂因素","P值")
+  MR_result_combine = data.frame(matrix(nrow = 0, ncol = length(columns)))
+  colnames(MR_result_combine) = columns
   #循环进行phenoscanner函数查找与query_snp相关的GWAS结果
   for (i in 1:length(exposure_dat$SNP)) {
     #获取SNP的rsID号
@@ -314,7 +323,7 @@ deletion_confounding_snp = function(confound = NULL,
   }
   #将MR_result_combine设置为数据框格式然后重新设置列名
   MR_result_combine=data.frame(MR_result_combine)
-  colnames(MR_result_combine)<-c("工具变量","混杂因素","P值")
+  #colnames(MR_result_combine)<-c("工具变量","混杂因素","P值")
   if (write) {
     write.csv(MR_result_combine,file = filepath,row.names = F)
   }  
