@@ -45,3 +45,31 @@ library(friendly2MR)
 **微信：**
 
 ![1679155331649](https://github.com/xiechengyong123/friendly2MR/blob/main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20230319000148.jpg)
+
+## 更新日志:
+
+1.添加了四个函数：分别是batch_ukbb_chrpos2rsID，clump_data_local，find_multiexposure_multioutcome_epigraphdb，gwasvcf2TwosampleMR_local；
+
+    batch_ukbb_chrpos2rsID：调用ukbb数据库的参考数据variants.tsv.gz对ukbb中的GWAS数据批量化进行SNP位点注释；
+
+    clump_data_local：调用ieugwasr包，在本地电脑进行去连锁不平衡，此功能可用于工具变量较多，在线进行clump时总是报错的情况；
+
+    find_multiexposure_multioutcome_epigraphdb：调用epigraphdb数据库的数据,对多个暴露和/或多个结局进行快速筛选；
+
+    gwasvcf2TwosampleMR_local：将从IEU官网下载到本地的gwasvcf文件转换为TwosampleMR的暴露或结局格式；
+
+2.修改函数名称：原包中的find_anyexposur_outcome和find_exposur_anyoutcome函数名称进行更改：
+
+    find_anyexposur_outcome-->find_multiexposure_outcome;
+
+    find_exposur_anyoutcome-->find_exposure_multioutcome;
+
+3.添加了函数和参数的注释，便于观众老爷们的理解。
+
+4.文件中包含了ukbb的参考文件，太大了无法上传，只能存在我的百度云盘，链接：https://pan.baidu.com/s/1fdQu2rluE2fd6sgXcHIX0g
+提取码：4sc4。
+
+5.**该R包只分享10个人且30天内有效，先到先得，过时无效**。
+
+----------------------------------------------------------2023年-4月-9日---------------------------------------------------------------------------
+
