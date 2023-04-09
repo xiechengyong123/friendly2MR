@@ -16,7 +16,8 @@
 
 ```
 if (!requireNamespace("remotes", quietly = TRUE))install.packages("remotes")
-remotes::install_github("xiechengyong123/friendly2MR")
+git clone  git@github.com:xiechengyong123/friendly2MR.git
+remotes::install_local("你的文件路径/friendly2MR")
 library(friendly2MR)
 ```
 
@@ -65,6 +66,6 @@ library(friendly2MR)
 
 3.添加了函数和参数的注释，便于观众老爷们的理解。
 
-## 关于包:关于该包的使用和安装问题欢迎大家来聊骚(⑅˃◡˂⑅)
+## 关于该包的使用和安装问题欢迎大家来聊骚(⑅˃◡˂⑅)
 
 ---------------------------------------------------2023年-4月-9日-------------------------------------------------------------
