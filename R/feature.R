@@ -442,7 +442,7 @@ if(T){
 }
 
 #定义函数在本地进行去连锁不平衡
-.clump_data_local_fun=function(dat,clump_kb,clump_r2,clump_p1,bfile,plink=plinkbinr::get_plink_exe()){
+.clump_data_local_fun.default=function(dat,clump_kb,clump_r2,clump_p1,bfile,plink=plinkbinr::get_plink_exe()){
   pval_column <- "pval.exposure"
   if (!is.data.frame(dat)) {
     stop("输入数据需得是从TwosampleMR包返回的数据框")
@@ -492,7 +492,7 @@ if(T){
   UseMethod(".batch_ukbb_chrpos2rsID_fun")
 }
 
-.batch_ukbb_chrpos2rsID_fun=function(ukbb_gwas_dir,save_dir){
+.batch_ukbb_chrpos2rsID_fun.default=function(ukbb_gwas_dir,save_dir){
   #记录开始时间
   start_time = Sys.time()
 
@@ -598,7 +598,7 @@ if(T){
 }
 
 # 筛选多个暴露和多个结局中的显著结果 -------------------------------------------------------
-.find_multiexposure_multioutcome_epigraphdb_fun=function(exposure,outcome,pal_threshold,write,save_path){
+.find_multiexposure_multioutcome_epigraphdb_fun.default=function(exposure,outcome,pal_threshold,write,save_path){
   start=Sys.time()
   cat("##########################开始筛查######################################\n")
   #设置mr_fast_result_all
@@ -710,7 +710,7 @@ if(T){
   UseMethod(".gwasvcf2TwosampleMR_local_fun")
 }
 
-.gwasvcf2TwosampleMR_local_fun<-function(dat,type,p1,clump,clump_kb,clump_r2,pop,write,save_path){
+.gwasvcf2TwosampleMR_local_fun.default=function(dat,type,p1,clump,clump_kb,clump_r2,pop,write,save_path){
   #1.判断是否存在dat文件
   #2.若dat是文件路径，则直接将本地的gwasvcf文件转换为TwosampleMR格式
   start=Sys.time()
@@ -744,6 +744,5 @@ if(T){
   cat("###################################转换完成###################################\n")
   return(my_gwas_data)
 }
-
 
 
