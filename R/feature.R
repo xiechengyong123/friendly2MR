@@ -551,7 +551,7 @@ if(T){
     colnames(merge)<-c("CHR","BP","SNP","effect_allele","other_allele","eaf","beta","se","pval","N")
 
     #去除SNP列中非rsID号的位点
-    merge=merge[grep("rs",merge$SNP),]%>%na.omit()
+    merge=merge[grep("rs",merge$SNP),]
     head(merge)
 
     single_gwas_name=stringr::str_sub(all_ukbb_gwas_file[i], start = 1L, end = -7L)
