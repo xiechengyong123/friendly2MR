@@ -700,7 +700,7 @@ if(T){
 #' @param write 逻辑值，是否将输出结果保存到文件中，默认：write = T 导出结果文件
 #' @param save_path 筛查结果的保存路径和文件名称，默认：save_path = "TwosampleMR_formate.txt"
 #' @export
-#' @return  epigraphdb数据库中快速筛查多个暴露和/或多个结局的筛选结果
+#' @return  将从IEU官网下载到本地的gwasvcf文件转换为TwosampleMR的暴露或结局格式
 gwasvcf2TwosampleMR_local=function(dat=dat,type = "exposure",p1=5e-08,clump=T,clump_kb = 10000,clump_r2 = 0.001,pop = "EUR",write=T,save_path ="TwosampleMR_formate.txt"){
   .gwasvcf2TwosampleMR_local_fun(dat,type,p1,clump,clump_kb,clump_r2,pop,write,save_path)
 }
