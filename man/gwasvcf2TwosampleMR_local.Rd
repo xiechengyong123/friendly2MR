@@ -36,7 +36,7 @@ gwasvcf2TwosampleMR_local(
 \item{save_path}{筛查结果的保存路径和文件名称，默认：save_path = "TwosampleMR_formate.txt"}
 }
 \value{
-epigraphdb数据库中快速筛查多个暴露和/或多个结局的筛选结果
+将从IEU官网下载到本地的gwasvcf文件转换为TwosampleMR的暴露或结局格式
 }
 \description{
 将从IEU官网下载到本地的gwasvcf文件转换为TwosampleMR的暴露或结局格式
