@@ -44,5 +44,5 @@ library(friendly2MR)
 
 **微信：**
 
-![1679155331649](https://github.com/xiechengyong123/friendly2MR/blob/main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20230319000148.jpg)
+shengxinxiedaoren
 
