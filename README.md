@@ -43,7 +43,7 @@ library(friendly2MR)
 ## 与我联系
 
 微信：
-shegnxinxiedaoren
+shengxinxiedaoren
 
 ## 更新日志:
 
