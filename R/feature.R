@@ -605,9 +605,10 @@ if(T){
   mr_fast_result_all<-data.frame()
 
   #设置ieu的id号保存路径
-  ao_file_RData=system.file("data", # 子目录
-                            "IEU_ao.RData", # 文件名
+  ao_file_dir=system.file("data", # 子目录
                             package="friendly2MR")
+  
+  ao_file_RData=paste0(ao_file_dir,"/IEU_ao.RData")
   #首先生成IEU的性状信息：
   if(!file.exists(ao_file_RData)){
     ao <- TwoSampleMR::available_outcomes()
