@@ -6,7 +6,7 @@ Maintainer: xiechengyong<xiechengyong@yeah.net>
 Description: 为用户（小白，临床医生）快速获取孟德尔随机化分分析结果
 License: MIT + file LICENSE
 Encoding: UTF-8
-LazyData: true
+LazyData: no
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
 Imports: TwoSampleMR, ieugwasr, phenoscanner, plinkbinr, data.table, dplyr, tidyr, stringr, epigraphdb, VariantAnnotation, gwasglue
