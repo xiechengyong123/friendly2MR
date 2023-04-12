@@ -589,11 +589,11 @@ if(T){
 #' @export
 #' @return  epigraphdb数据库中快速筛查多个暴露和/或多个结局的筛选结果
 find_multiexposure_multioutcome_epigraphdb=function(exposure = NULL,outcome = NULL,pval_threshold = 1e-05,write=T,save_path="find_multiexposure_multioutcome_epigraphdb.csv"){
-  .find_multiexposure_multioutcome_epigraphdb_fun(exposure,outcome,pal_threshold,write,save_path)
+  .find_multiexposure_multioutcome_epigraphdb_fun(exposure,outcome,pval_threshold ,write,save_path)
 }
 
 if(T){
-.find_multiexposure_multioutcome_epigraphdb_fun=function(exposure,outcome,pal_threshold,write,save_path)
+.find_multiexposure_multioutcome_epigraphdb_fun=function(exposure,outcome,pval_threshold ,write,save_path)
   UseMethod(".find_multiexposure_multioutcome_epigraphdb_fun")
 }
 
