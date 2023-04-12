@@ -598,7 +598,7 @@ if(T){
 }
 
 # 筛选多个暴露和多个结局中的显著结果 -------------------------------------------------------
-.find_multiexposure_multioutcome_epigraphdb_fun.default=function(exposure,outcome,pal_threshold,write,save_path){
+.find_multiexposure_multioutcome_epigraphdb_fun.default=function(exposure,outcome,pval_threshold,write,save_path){
   start=Sys.time()
   cat("##########################开始筛查######################################\n")
   #设置mr_fast_result_all
@@ -607,8 +607,7 @@ if(T){
   #设置ieu的id号保存路径
   ao_file_RData=system.file("data", # 子目录
                             "IEU_ao.RData", # 文件名
-                            package="friendly2MR", 
-                            mustWork=TRUE)
+                            package="friendly2MR")
   #首先生成IEU的性状信息：
   if(!file.exists(ao_file_RData)){
     ao <- TwoSampleMR::available_outcomes()
