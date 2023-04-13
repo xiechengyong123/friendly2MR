@@ -8,16 +8,15 @@
 
     2.查询一个暴露对多个结局的阳性结果:find_exposur_anyoutcome()：同样，一个一个跑，有点慢，凑合着跑吧！
 
-    3.填充工具变量中插补SNP的eaf：主要是调用1000基因组数据做的填充，**与原暴露或结局中GWAS中SNP的eaf或有所不同，谨慎使用！**
+    3.填充工具变量中插补SNP的eaf：主要是调用1000基因组数据做的填充，**与原暴露或结局中GWAS中SNP的eaf或有所不同，谨慎使用！
 
-    4.查找工具变量相关的混杂因素：这个主要是调用了[phenoscanner](http://www.phenoscanner.medschl.cam.ac.uk/)函数，但存在SNP在该数据库中找不到的情况，此种情况下，将默认无混杂因素
+    4.查找工具变量相关的混杂因素：这个主要是调用了[phenoscanner](http://www.phenoscanner.medschl.cam.ac.uk/)函数，但存在SNP在该数据库中找不到的情况，此种情况下，将默认无混杂因素.
 
 ## 安装和加载
 
-```
+```R
 if (!requireNamespace("remotes", quietly = TRUE))install.packages("remotes")
-git clone  git@github.com:xiechengyong123/friendly2MR.git
-remotes::install_local("你的文件路径/friendly2MR")
+remotes::install_github("xiechengyong123/friendly2MR")
 library(friendly2MR)
 ```
 
