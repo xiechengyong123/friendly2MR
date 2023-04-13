@@ -9,4 +9,4 @@ Encoding: UTF-8
 LazyData: no
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
-Imports: TwoSampleMR, ieugwasr, phenoscanner, plinkbinr, data.table, dplyr, tidyr, stringr, epigraphdb, VariantAnnotation, gwasglue
+#Imports: TwoSampleMR, ieugwasr, phenoscanner, plinkbinr, data.table, dplyr, tidyr, stringr, epigraphdb, VariantAnnotation, gwasglue
