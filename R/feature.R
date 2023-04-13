@@ -249,7 +249,7 @@ if(T){
 
     for(i in 1:nrow(exposure)){
       if (is.na(exposure$eaf.exposure[i])) {
-        cat(paste0("#########################","当前填充的是第",i,"个SNP：",exposure$SNP[i],"#########################\n"))
+        cat(paste0("#########################","当前填充的是第",i,"个SNP：",exposure$SNP[i],"\n"))
         #如果该SNP的eaf缺失则填充SNP的eaf
         snp_info=as.data.frame(ieugwasr::afl2_rsid(exposure$SNP[i]))
         if (nrow(snp_info)==0) {
@@ -291,7 +291,7 @@ if(T){
     cat("###################################################################################\n")
     for(i in 1:nrow(outcome)){
       if (is.na(outcome$eaf.outcome[i])) {
-        cat(paste0("#########################","当前填充的是第",i,"个SNP：",outcome$SNP[i],"#########################\n"))
+        cat(paste0("#########################","当前填充的是第",i,"个SNP：",outcome$SNP[i],"\n"))
         #如果该SNP的eaf缺失则填充SNP的eaf
         snp_info=as.data.frame(ieugwasr::afl2_rsid(outcome$SNP[i]))
         if (nrow(snp_info)==0) {
