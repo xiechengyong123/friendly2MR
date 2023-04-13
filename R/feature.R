@@ -506,7 +506,8 @@ if(T){
     #加载ukbb的SNP参考数据集
     load(file = file_ukbb_ref_Rdata)
   }
-
+  
+  ukbb_gwas_dir=paste0(ukbb_gwas_dir,"/")
   #列出所有的ukbb数据集
   files<-list.files(ukbb_gwas_dir)
   #提取.bgz结尾的文件
