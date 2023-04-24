@@ -49,7 +49,7 @@ show_demo_gwas=function(){
                 paste("当前friendly2MR版本：", utils::packageVersion("friendly2MR"), "\n"),
                 "[>] (⑅˃◡˂⑅)您已成功安装friendly2MR包(⑅˃◡˂⑅)\n",
                 "[>] 如果您是首次使用该包请您首先安装安装friendly2MR包所需的依赖包，依赖包安装代码如下：\n",
-                "[>] friendly2MR::install_postGWAS_dependence()\n",
+                "[>] friendly2MR::install_friendly2MR_dependence()\n",
                 "[>] friendly2MR包下载安装以及函数使用教程链接：https://github.com/xiechengyong123/friendly2MR\n"
         )
         packageStartupMessage(
