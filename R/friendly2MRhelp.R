@@ -16,7 +16,7 @@ chat_with_me=function(){
     message("如果您有关于该包的任何意见和建议请毫不犹豫的联系我！(⑅˃◡˂⑅)")
     message("1.邮箱：", "xiechengyong@yeah.net")
     message("2.b站：", "https://space.bilibili.com/397473016?spm_id_from=..0.0")
-    message("3.微信号：", "shengxinxiedaoren")
+    message("3.微信号：", "19183600768")
     message("4.公众号：", "生信蟹道人")
     message("5.简书：","生信蟹道人")
     message("====================分割线==========================")
