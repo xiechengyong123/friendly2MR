@@ -134,10 +134,7 @@ install_friendly2MR_dependence=function(){
         install.packages(packages[i], dependencies = TRUE, quiet = TRUE, keep_outputs=TRUE)
         }
     }
-    
-    #安装Fast2TWAS包
-    if (!requireNamespace(c("remotes","do"), quietly = TRUE))install.packages(c("remotes","do"))
-    if (!requireNamespace("Fast2TWAS", quietly = TRUE))remotes::install_github("xiechengyong123/Fast2TWAS",auth_token = "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")
+
 
     #从github上下载R包
     if (!"ieugwasr" %in% installed.packages()[,"Package"]) {
