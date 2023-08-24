@@ -112,7 +112,6 @@ friendly2MR_update_plans=function(){
 }
 
 
-
 #' 安装friendly2MR的相关依赖
 #'
 #' @export install_friendly2MR_dependence
