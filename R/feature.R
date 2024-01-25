@@ -469,7 +469,7 @@ if(T){
   d <- data.frame(rsid = dat$SNP, pval = dat[[pval_column]], 
                   id = dat$id.exposure)
   
-  out <- ieugwasr::ld_clump_local(dat = d, clump_kb = clump_kb, clump_r2 = clump_r2, 
+  out <- ieugwasr::ld_clump(dat = d, clump_kb = clump_kb, clump_r2 = clump_r2, 
                             clump_p = clump_p1, bfile = bfile, plink=plink)
   keep <- paste(dat$SNP, dat$id.exposure) %in% paste(out$rsid, 
                                                      out$id)
