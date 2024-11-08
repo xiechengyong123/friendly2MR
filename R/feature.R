@@ -48,7 +48,7 @@ if(T){
       p2 = p2,
       r2 = r2,
       kb = kb,
-      access_token = NULL
+      #access_token = NULL
     )
     
     #若暴露P值太小，则无法进行MR分析
@@ -59,7 +59,7 @@ if(T){
     }
     
     #从结局中获取有效的工具变量
-    outcome_dat <- TwoSampleMR::extract_outcome_data(snps=exposure_dat$SNP, outcomes = outcome,rsq =LD ,access_token = NULL)
+    outcome_dat <- TwoSampleMR::extract_outcome_data(snps=exposure_dat$SNP, outcomes = outcome,rsq =LD )
     
     #若在结局中无有效的IV，则需重新设置LD，然后在查找合适的工具变量
     if (is.null(outcome_dat)) {
@@ -156,7 +156,7 @@ if(T){
       p2 = p2,
       r2 = r2,
       kb = kb,
-      access_token = NULL
+      #access_token = NULL
     )
     
     #若暴露P值太小，则无法进行MR分析
@@ -167,7 +167,7 @@ if(T){
     }
     
     #从结局中获取有效的工具变量
-    outcome_dat <- TwoSampleMR::extract_outcome_data(snps=exposure_dat$SNP, outcomes = outcome_id,rsq =LD ,access_token = NULL)
+    outcome_dat <- TwoSampleMR::extract_outcome_data(snps=exposure_dat$SNP, outcomes = outcome_id,rsq =LD )
     
     #若在结局中无有效的IV，则需重新设置LD，然后在查找合适的工具变量
     if (is.null(outcome_dat)) {
