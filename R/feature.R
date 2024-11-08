@@ -47,8 +47,7 @@ if(T){
       clump = clump,
       p2 = p2,
       r2 = r2,
-      kb = kb,
-      #access_token = NULL
+      kb = kb
     )
     
     #若暴露P值太小，则无法进行MR分析
@@ -155,8 +154,7 @@ if(T){
       clump = clump,
       p2 = p2,
       r2 = r2,
-      kb = kb,
-      #access_token = NULL
+      kb = kb
     )
     
     #若暴露P值太小，则无法进行MR分析
